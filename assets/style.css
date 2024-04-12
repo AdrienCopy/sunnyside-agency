@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 1440px;
+  font-family: "Barlow", sans-serif;
+  font-size: 18px;
+}
+
+h1, h2 {
+  font-family: "Fraunces", serif;
+}
+
+header {
+  background-image: url(images/photos/image-header.jpg);
+  background-size: cover;
+  height: 800px;
+  color: white;
+}
+header figure {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+header figure .arrow {
+  padding-top: 80px;
+}
+header nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 34px;
+}
+header nav figure {
+  justify-content: left;
+  align-items: center;
+}
+header nav .containe_a {
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+}
+header nav a {
+  width: 80px;
+  text-align: center;
+  padding-left: 40px;
+}
+header nav .contact {
+  background-color: rgb(255, 255, 255);
+  color: black;
+  border-radius: 27px;
+  font-family: "Fraunces", serif;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  width: 140px;
+  height: 56px;
+}
+header h1 {
+  position: relative;
+  text-align: center;
+  margin-top: 116px;
+  font-size: 52px;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+main article {
+  width: 50%;
+  height: 600px;
+}
+main article figure {
+  width: 100%;
+}
+main article figure img {
+  position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 600px;
+}
+main article .content {
+  padding: 25%;
+  position: relative;
+}
+main article .content h1 {
+  padding-bottom: 25px;
+}
+main article .content p {
+  line-height: 200%;
+  padding-bottom: 25px;
+}
+main article .content a {
+  text-transform: uppercase;
+  font-family: "Fraunces", serif;
+}
+main article .content_p {
+  padding: 45% 25% 25% 25%;
+  position: relative;
+  text-align: center;
+  color: hsl(167, 40%, 24%);
+}
+main article .content_p h1 {
+  padding-bottom: 25px;
+}
+main article .content_p p {
+  line-height: 200%;
+  padding-bottom: 25px;
+}
+main article .content_p a {
+  text-transform: uppercase;
+  font-family: "Fraunces", serif;
+}
+
+.title {
+  width: 100%;
+  text-align: center;
+  background-color: #FFFCF8;
+  padding: 10px;
+}
+.title h1 {
+  color: hsl(213, 9%, 39%);
+}
+.title .content_people {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.title .people {
+  width: 30%;
+  padding: 20px;
+}
+.title .people img {
+  position: relative;
+  width: 30%;
+  height: 30%;
+  padding: 20px;
+  border-radius: 50%;
+}
+.title .people p {
+  padding: 10%;
+  color: hsl(210, 4%, 67%);
+}/*# sourceMappingURL=style.css.map */
