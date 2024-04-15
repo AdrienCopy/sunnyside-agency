@@ -1,14 +1,14 @@
-* {
-    margin: 0;
-    padding: 0;
-    
-}
-
 @mixin mobile {
     @media screen and (max-width: 768px) {
       @content;
     }
   }
+
+* {
+    margin: 0;
+    padding: 0;
+    
+}
 
 body {
     width: 1440px;
@@ -51,7 +51,10 @@ header {
         flex-direction: row;
         justify-content: space-between;
         padding: 34px;
-        
+        @include mobile{
+            flex-direction: column;
+            position: relative;
+        }
         figure {
             justify-content: left;
             align-items: center;
@@ -60,6 +63,11 @@ header {
             align-items: center;
             display: flex;
             justify-content: flex-end;
+            @include mobile{
+                //flex-direction: column;
+                //position: relative;
+                display: none;
+            }
         }
         a {
             width: 80px;
@@ -67,6 +75,7 @@ header {
             padding-left: 40px;
             @include mobile {
                 width: auto;
+                padding: auto;
             }
         }
         .contact {
@@ -81,12 +90,55 @@ header {
             height: 56px;
             @include mobile {
                 width: auto;
+                height: auto;
+                text-align: center;
+                background-color: yellow;
+                
+
             }
         }
         .contact:hover {
             background-color: #64c8fa;
             color: rgb(255, 255, 255);
         }
+
+        .menu {
+            display: none;
+            height: 390px;
+            @include mobile{
+                display: block;
+                flex-direction: column;
+                background-color: white;
+                text-align: center;
+                text-decoration: none;
+                color: rgb(128, 128, 128);
+                z-index: 1000;
+                li {
+                    list-style-type: none;
+                }
+            } 
+        }
+        
+
+        #menuToggle:checked + .menu-icon {
+                display: none;
+            }
+        
+        input[type="checkbox"] {
+            display: none;
+            @include mobile {
+                display: flex;
+                appearance: none;
+                
+            }
+        }
+
+        input[type="checkbox"]::after {
+            content: '☰';
+            font-size: 18pt;
+            color: rgb(255, 255, 255);
+        }
+            
     }
     
     h1 {

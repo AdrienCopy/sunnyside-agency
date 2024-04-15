@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -46,6 +47,12 @@ header nav {
   justify-content: space-between;
   padding: 34px;
 }
+@media screen and (max-width: 768px) {
+  header nav {
+    flex-direction: column;
+    position: relative;
+  }
+}
 header nav figure {
   justify-content: left;
   align-items: center;
@@ -55,6 +62,11 @@ header nav .containe_a {
   display: flex;
   justify-content: flex-end;
 }
+@media screen and (max-width: 768px) {
+  header nav .containe_a {
+    display: none;
+  }
+}
 header nav a {
   width: 80px;
   text-align: center;
@@ -63,6 +75,7 @@ header nav a {
 @media screen and (max-width: 768px) {
   header nav a {
     width: auto;
+    padding: auto;
   }
 }
 header nav .contact {
@@ -79,10 +92,50 @@ header nav .contact {
 @media screen and (max-width: 768px) {
   header nav .contact {
     width: auto;
+    height: auto;
+    text-align: center;
+    background-color: yellow;
   }
 }
 header nav .contact:hover {
   background-color: #64c8fa;
+  color: rgb(255, 255, 255);
+}
+header nav .menu {
+  display: none;
+  height: 390px;
+}
+@media screen and (max-width: 768px) {
+  header nav .menu {
+    display: block;
+    flex-direction: column;
+    background-color: white;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(128, 128, 128);
+    z-index: 1000;
+  }
+  header nav .menu li {
+    list-style-type: none;
+  }
+}
+header nav #menuToggle:checked + .menu-icon {
+  display: none;
+}
+header nav input[type=checkbox] {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  header nav input[type=checkbox] {
+    display: flex;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+  }
+}
+header nav input[type=checkbox]::after {
+  content: "☰";
+  font-size: 18pt;
   color: rgb(255, 255, 255);
 }
 header h1 {
