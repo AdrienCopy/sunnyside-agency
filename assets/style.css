@@ -8,6 +8,11 @@ body {
   font-family: "Barlow", sans-serif;
   font-size: 18px;
 }
+@media screen and (max-width: 768px) {
+  body {
+    width: 100%;
+  }
+}
 
 h1, h2 {
   font-family: "Fraunces", serif;
@@ -18,6 +23,14 @@ header {
   background-size: cover;
   height: 800px;
   color: white;
+}
+@media screen and (max-width: 768px) {
+  header {
+    background: contain;
+    background-position: center;
+    width: 100%;
+    height: 534px;
+  }
 }
 header figure {
   position: relative;
@@ -47,6 +60,11 @@ header nav a {
   text-align: center;
   padding-left: 40px;
 }
+@media screen and (max-width: 768px) {
+  header nav a {
+    width: auto;
+  }
+}
 header nav .contact {
   background-color: rgb(255, 255, 255);
   color: black;
@@ -58,6 +76,15 @@ header nav .contact {
   width: 140px;
   height: 56px;
 }
+@media screen and (max-width: 768px) {
+  header nav .contact {
+    width: auto;
+  }
+}
+header nav .contact:hover {
+  background-color: #64c8fa;
+  color: rgb(255, 255, 255);
+}
 header h1 {
   position: relative;
   text-align: center;
@@ -66,15 +93,31 @@ header h1 {
   text-transform: uppercase;
   letter-spacing: 10px;
 }
+@media screen and (max-width: 768px) {
+  header h1 {
+    font-size: 19pt;
+  }
+}
 
 main {
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
   flex-wrap: wrap;
+}
+@media screen and (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
 }
 main article {
   width: 50%;
   height: 600px;
+}
+@media screen and (max-width: 768px) {
+  main article {
+    width: 100%;
+    height: auto;
+  }
 }
 main article figure {
   width: 100%;
@@ -84,6 +127,13 @@ main article figure img {
   -o-object-fit: cover;
      object-fit: cover;
   height: 600px;
+}
+@media screen and (max-width: 768px) {
+  main article figure img {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
 }
 main article .content {
   padding: 25%;
@@ -96,6 +146,12 @@ main article .content p {
   line-height: 200%;
   padding-bottom: 25px;
 }
+@media screen and (max-width: 768px) {
+  main article .content p {
+    line-height: normal;
+    text-align: center;
+  }
+}
 main article .content a {
   text-transform: uppercase;
   font-family: "Fraunces", serif;
@@ -106,12 +162,28 @@ main article .content_p {
   text-align: center;
   color: hsl(167, 40%, 24%);
 }
+@media screen and (max-width: 768px) {
+  main article .content_p {
+    padding: auto;
+  }
+}
 main article .content_p h1 {
   padding-bottom: 25px;
+}
+@media screen and (max-width: 768px) {
+  main article .content_p h1 {
+    text-align: center;
+  }
 }
 main article .content_p p {
   line-height: 200%;
   padding-bottom: 25px;
+}
+@media screen and (max-width: 768px) {
+  main article .content_p p {
+    line-height: normal;
+    text-align: center;
+  }
 }
 main article .content_p a {
   text-transform: uppercase;
@@ -122,7 +194,11 @@ main article .content_p a {
   width: 100%;
   text-align: center;
   background-color: #FFFCF8;
-  padding: 10px;
+}
+@media screen and (max-width: 768px) {
+  .title {
+    height: auto;
+  }
 }
 .title h1 {
   color: hsl(213, 9%, 39%);
@@ -133,9 +209,20 @@ main article .content_p a {
   flex-wrap: wrap;
   justify-content: space-around;
 }
+@media screen and (max-width: 768px) {
+  .title .content_people {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .title .people {
   width: 30%;
   padding: 20px;
+}
+@media screen and (max-width: 768px) {
+  .title .people {
+    width: 90%;
+  }
 }
 .title .people img {
   position: relative;
@@ -147,4 +234,51 @@ main article .content_p a {
 .title .people p {
   padding: 10%;
   color: hsl(210, 4%, 67%);
+}
+
+.photo {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+@media screen and (max-width: 768px) {
+  .photo {
+    flex-wrap: wrap;
+  }
+}
+.photo img {
+  width: 25%;
+}
+@media screen and (max-width: 768px) {
+  .photo img {
+    width: 50%;
+  }
+}
+
+footer {
+  background-color: hsl(168, 34%, 41%);
+  text-align: center;
+  width: 100%;
+  height: 350px;
+}
+footer .logo {
+  filter: invert(90%);
+  opacity: 0.5;
+}
+footer figure {
+  padding: 72px;
+}
+footer figure img {
+  margin: 0 15px 0 15px;
+}
+footer figure img:hover {
+  filter: brightness(200);
+}
+footer a {
+  padding: 30px;
+  color: hsl(167, 40%, 24%);
+}
+footer a:hover {
+  color: rgb(255, 255, 255);
 }/*# sourceMappingURL=style.css.map */

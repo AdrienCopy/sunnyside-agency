@@ -4,11 +4,21 @@
     
 }
 
+@mixin mobile {
+    @media screen and (max-width: 768px) {
+      @content;
+    }
+  }
+
 body {
     width: 1440px;
     //width: 100%;
     font-family: "Barlow", sans-serif;;
     font-size: 18px;
+    @include mobile {
+        width: 100%;
+        
+      }
 }
 
 h1, h2 {
@@ -20,6 +30,13 @@ header {
     background-size: cover;
     height: 800px;
     color: white;
+    @include mobile {
+        background:contain;
+        background-position: center;
+        width: 100%;
+        height: 534px;
+
+    }
     figure {
         position: relative;
         display: flex;
@@ -48,6 +65,9 @@ header {
             width: 80px;
             text-align: center;
             padding-left: 40px;
+            @include mobile {
+                width: auto;
+            }
         }
         .contact {
             background-color: rgb(255, 255, 255);
@@ -59,6 +79,13 @@ header {
             align-items: center;
             width: 140px;
             height: 56px;
+            @include mobile {
+                width: auto;
+            }
+        }
+        .contact:hover {
+            background-color: #64c8fa;
+            color: rgb(255, 255, 255);
         }
     }
     
@@ -69,16 +96,26 @@ header {
         font-size: 52px;
         text-transform: uppercase;
         letter-spacing: 10px;
+        @include mobile {
+            font-size: 19pt;
+        }
     }   
 }
 
 main {
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     flex-wrap: wrap;
+    @include mobile{
+        flex-direction: column;
+    }
     article {
         width: 50%;
         height: 600px;
+        @include mobile{
+            width: 100%;
+            height: auto;
+        }
         
         figure {
             width: 100%;
@@ -86,6 +123,11 @@ main {
                 position: absolute;
                 object-fit: cover;
                 height: 600px;
+                @include mobile {
+                    position: relative;
+                    width: 100%;
+                    height: auto;
+                }
             }
         }
         .content {
@@ -97,6 +139,10 @@ main {
             p {
                 line-height: 200%;
                 padding-bottom: 25px;
+                @include mobile {
+                    line-height: normal;
+                    text-align: center;
+                }
             }
             a {
                 text-transform: uppercase;
@@ -109,12 +155,24 @@ main {
             position: relative;
             text-align: center;
             color: hsl(167, 40%, 24%);
+            @include mobile {
+                padding: auto;
+            
+            }
+            
             h1 {
                 padding-bottom: 25px;
+                @include mobile {
+                    text-align: center;
+                }
             }
             p {
                 line-height: 200%;
                 padding-bottom: 25px;
+                @include mobile {
+                    line-height: normal;
+                    text-align: center;
+                }
             }
             a {
                 text-transform: uppercase;
@@ -128,7 +186,9 @@ main {
     width: 100%;
     text-align: center;
     background-color: #FFFCF8;
-    padding: 10px;
+    @include mobile {
+        height: auto;
+    }
     h1 {
         color: hsl(213, 9%, 39%);
     }
@@ -138,12 +198,18 @@ main {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-around;
+        @include mobile {
+            flex-direction: column;
+            align-items: center;
+        }
         
     }
     .people {
         width: 30%;
-        
         padding: 20px;
+        @include mobile {
+            width: 90%;
+        }
         img {
             position: relative;
             width: 30%;
@@ -157,4 +223,52 @@ main {
         }
         
     }
+}
+
+.photo {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    @include mobile {
+        flex-wrap: wrap;
+    }
+    img {
+        width: 25%;
+        @include mobile {
+            width: 50%;
+        }
+        
+    }
+}
+
+footer {
+    background-color: hsl(168, 34%, 41%);
+    text-align: center;
+    width: 100%;
+    height: 350px;
+    .logo {
+        filter: invert(90%);
+        opacity: 0.5;
+    }
+    figure {
+        padding: 72px;
+        
+        img {
+            margin: 0 15px 0 15px;
+        }
+        img:hover {
+            filter: brightness(200);
+        }
+    }
+    
+    a {
+        padding: 30px;
+        color: hsl(167, 40%, 24%);
+    }
+    a:hover {
+        color: rgb(255, 255, 255);
+        
+    }
+
 }
