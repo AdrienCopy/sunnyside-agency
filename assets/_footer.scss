@@ -1,0 +1,29 @@
+footer {
+    background-color: #90D4C5;
+    text-align: center;
+    figure {
+        padding: 72px;
+        
+        img {
+            margin: 0 15px 0 15px;
+        }
+        img:hover {
+            filter: brightness(200);
+        }
+    }
+    
+    a {
+        padding: 30px;
+        color: hsl(167, 40%, 24%);
+    }
+    a:hover {
+        color: rgb(255, 255, 255);
+        
+    }
+    .logo {
+        filter: invert(90%);
+        opacity: 0.5;
+    }    
+}
+
+

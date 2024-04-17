@@ -12,109 +12,93 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
+
   <title>Sunnyside agency landing page</title>
 
 </head>
 <body>
   <header>
-    
-    <nav>
-      <figure>
-        <img src="assets/images/logo.svg" alt="logo">
+    <section class="menu">
+      <figure class="logo">
+        <img src="assets/images/logo.svg" alt="">
       </figure>
-      
-      
-      <div class="containe_a">
-        <a>About</a>
-        <a>Services</a>
-        <a>Projects</a>
-        <a class="contact">Contact</a>
-      </div>
-      <input type="checkbox" id="menuToggle" checked>
-      <label for="menuToggle" class="menu-icon">
-        
-      <ul class="menu">
-        <li><a>About</a></li>
-        <li><a>Services</a></li>
-        <li><a>Projects</a></li>
-        <li><a class="contact">Contact</a></li>
-      </ul>
-    </label>
-    </nav>
-    
-  
-    <h1> We are creatives</h1>
-
-    <figure>
-      <img class="arrow" src="assets/images/icons/icon-arrow-down.svg">
-    </figure>
-
-   
+      <nav>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Projects</a>
+        <a href="#" class="contact">Contact</a>
+      </nav>
+    </section>
+    <section class="creative">
+      <h1>We are creatives</h1>
+      <figure>
+        <img src="assets/images/icons/icon-arrow-down.svg" alt="">
+      </figure>
+    </section>
   </header>
-
   <main>
-    <article>
-      <figure>
-        <img src="assets/images/photos/image-transform.jpg" alt="">
-      </figure>
-    </article>
+    <section class="first">
+      <article>
+        <figure>
+          <img src="assets/images/photos/image-transform.jpg" alt="">
+        </figure>
+      </article>
+      
+      <article>
+        <h1>Transform your brand</h1> 
 
-    <article>
-      <div class="content">
-        <h1>Transform your brand</h1>
         <p>
-        We are a full-service creative agency specializing in helping brands grow fast. 
-        Engage your clients through compelling visuals that do most of the marketing for you.
+          We are a full-service creative agency specializing in helping brands grow fast. 
+          Engage your clients through compelling visuals that do most of the marketing for you.
         </p>
-        <a>Learn more</a>
-    </div>
-    </article>
 
-    <article>
-      <div class="content">
+        <h2>Learn more</h2>
+      </article>
+    
+    </section>
+    <section class="first a">
+
+      <article>
+        <figure>
+          <img src="assets/images/photos/image-stand-out.jpg" alt="">
+        </figure>
+      </article>
+
+      <article>
         <h1>Stand out to the right audience</h1>
+
         <p>
-        Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places. 
+          Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places. 
         </p>
-        <a>Learn more</a>
-      </div>
-        
-    </article>
 
-    <article>
-      <figure>
-        <img src="assets/images/photos/image-stand-out.jpg" alt="">
-      </figure>
-    </article>
+        <h2>Learn more</h2>
+      </article>
 
-    <article>
-      <figure>
-        <img src="assets/images/photos/image-photography.jpg" alt="">
-      </figure>
-      <div class="content_p">
-      <h1>Photography</h1>
-      <p>
-      Increase your credibility by getting the most stunning, high-quality photos that improve your business image.  
-      </p>
-      </div>
-    </article>
+    </section>
 
-    <article>
-      <figure>
-        <img src="assets/images/photos/image-graphic-design.jpg" alt="">
-      </figure>
-      <div class="content_p">
-      <h1>Graphic design</h1>
-      <p>      
-        Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.
-      </p>
-      </div>
-    </article>
+    <section class="second">
+      <article class="graphic">
+        <h1>Graphic design</h1>
+        <p>
+          Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.
+        </p>
+      </article>
+      <article class="photography">
+        <h1>Photography</h1>
+        <p>
+          Increase your credibility by getting the most stunning, high-quality photos that improve your business image.
+        </p>
+      </article>
 
-    <article class="title">
-      <h1>Client testimonials</h1>
-      <div class="content_people">
-      <div class="people">
+    </section>
+
+
+    <section class="containe">
+      <article class="title">
+        <h1>Client testimonials</h1>
+      </article>
+
+      <article class="people">
         <figure>
           <img src="assets/images/people/image-emily.jpg">
         </figure>
@@ -127,9 +111,9 @@
         <p>
           Marketing Director
         </p>
-      </div>
+      </article>
 
-      <div class="people">
+      <article class="people">
         <figure>
           <img src="assets/images/people/image-thomas.jpg">
         </figure>
@@ -142,14 +126,14 @@
         <p>
           Chief Operating Officer
         </p>
-      </div>
+      </article>
 
-      <div class="people">
+      <article class="people">
         <figure>
           <img src="assets/images/people/image-jennie.jpg">
         </figure>
         <p>
-          Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!  
+          Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!
         </p>
         <h3>
           Jennie F.
@@ -157,34 +141,30 @@
         <p>
           Business Owner
         </p>
-        
-      </div>
 
-    </div>
-    </article>
-    <article class="photo">
-      <img src="assets/images/photos/image-gallery-milkbottles.jpg">
-      <img src="assets/images/photos/image-gallery-orange.jpg">
-      <img src="assets/images/photos/image-gallery-cone.jpg">
-      <img src="assets/images/photos/image-gallery-sugarcubes.jpg">
-    </article>
+      </article>
+      
+    </section>
+
   </main>
-    <footer>
-      <figure>
-        <img class="logo" src="assets/images/logo.svg" alt="logo">
-      </figure>
-      <a>About</a>
-      <a>Services</a>
-      <a>Projects</a>
-      <a>Contact</a>
-      <figure>
-        <img src="assets/images/icons/icon-facebook.svg" alt="">
-        <img src="assets/images/icons/icon-instagram.svg" alt="">
-        <img src="assets/images/icons/icon-twitter.svg" alt="">
-        <img src="assets/images/icons/icon-pinterest.svg" alt="">
-      </figure>
-    </footer>
+  <footer>
+    <figure class="logo">
+      <img src="assets/images/logo.svg" alt="logo">
+    </figure>
 
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Projects</a>
+    <a href="#">Contact</a>
+
+    <figure>
+      <img src="assets/images/icons/icon-facebook.svg" alt="">
+      <img src="assets/images/icons/icon-instagram.svg" alt="">
+      <img src="assets/images/icons/icon-twitter.svg" alt="">
+      <img src="assets/images/icons/icon-pinterest.svg" alt="">
+    </figure>
+
+  </footer>
   
 </body>
 </html>
