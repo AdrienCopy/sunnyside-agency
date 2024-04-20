@@ -23,9 +23,6 @@ header {
             justify-content: flex-end;
             align-items: center;
             text-align: center;
-            @include mobile {
-                display: none;
-            }
             a {
                 color: white;
                 text-decoration: none; 
@@ -42,6 +39,11 @@ header {
             justify-content: center;
             width: 120px;
             height: 46px;
+        }
+
+        .contact:hover {
+            background-color: #64c8fa;
+            color: rgb(255, 255, 255);
         }
         
         figure {
